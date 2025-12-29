@@ -1,0 +1,74 @@
+#+TITLE: reOrg
+#+DESCRIPTION: Managing and automating a fresh install of Arch linux with Emacs and Org files.
+#+AUTHOR: devlinman
+/Your first step to becoming a chronic Emacs user!/
+
+
+* Why?
+
++ I find myself constantly coming back to Arch Linux. Can't get too much of it!
+
++ I feel safe knowing that if I have to reinstall Arch Linux, I don't need to start from scratch.
+
++ I have a lot of dotfiles and configs lying around.
+
++ But sometimes, you just need a shell script.
+  For example,
+  - creating systemd units and enabling them.
+    =systemctl enable dropbox.service=
+  - creating some default folders.
+    =mkdir -p /media/DATA=
+  - setting up language toolchains.
+   =rustup default stable=
+   =rustup component add rustfmt clippy=
+  - installing some default packages.
+    =pacman -S zip tar ttf-jetbrains-mono keepassxc=
+    =pacman -R vi=
+  - And many more...
+
++ There are several different ways to accomplish any of these tasks.
+  There are many dotfile managers - like GNU Stow, Stor (crates.io), etc.
+
++ And there are several command runners - like just.
+
+  - /(*Sigh... Maybe I need to use NixOS...)/
+
++ So despite all these, if one wishes to torture himself (kidding...), he may want to use GNU Emacs, Emacs-LisP and Org-mode to configure his system.
+
++ I have recently started using Emacs (Doom), and I figured this project would be a great way to flex my brain, and my skills.
+
++ I will note that the entirety of this project was programmed on Doom Emacs. So I have learnt many keybindings and many more quirks of (Doom) Emacs.
+
++ If nothing else, this project serves as a _proof of concept_ that one can indeed (/spend too much time on Emacs/) manage dotfiles using Emacs and Orgfiles.
+
+  - /(But it can also be considered as a part of my dotfiles.)/
+
+
+
+* Setup
+
++ I am generously assuming anyone willing to touch this repo wants to use Emacs to run this code.
+
++ The keybindings I have mentioned are specific for Doom Emacs. Will not work on other versions of Emacs.
+
++ Org package is necessary. Configure that in your =init.el= file.
+
+
+* Usage
+
++ The scripts present in the [[./scripts][scripts]] folder are for your reference.
+
++ They are tailored for my system exclusively. Do not expect them to work on yours.
+  /(Also ew. Dont run shell scripts from the internet.)/
+
++ You may wish to modify the [[./New Install.org][New Install.org]] file to generate your own shell scripts or whatever.
+  See licensing information below.
+
+
+
+
+* License
+
++ This project is licensed under GNU GPL V3.
+
++ Find the License information at [[./LICENSE][LICENSE]]
